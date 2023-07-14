@@ -3,7 +3,8 @@ import { initializeApp } from "firebase/app";
 import {
   createUserWithEmailAndPassword,
   getAuth,
-  signInWithRedirect,
+  signInWithPopup,
+  
   GoogleAuthProvider,
   signOut,
   signInWithEmailAndPassword,
@@ -57,7 +58,7 @@ export const FirebaseProvider = (props) => {
 
   const signInWithGoogle = () => {
    
-    signInWithRedirect(firebaseAuth, provider)
+    signInWithPopup(firebaseAuth, provider)
       .then((userCredential) => {
         alert("Successfully signed in");
       })
