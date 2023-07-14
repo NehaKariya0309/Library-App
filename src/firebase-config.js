@@ -3,14 +3,13 @@ import { initializeApp } from "firebase/app";
 import {
   createUserWithEmailAndPassword,
   getAuth,
-  signInWithPopup,
+  signInWithRedirect,
   GoogleAuthProvider,
   signOut,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import {getDatabase, set ,ref} from "firebase/database"
 import { getFirestore } from "firebase/firestore";
-import { collection, addDoc, doc, getDoc,query, where, getDocs } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAi0hpdMo64FagE_3Q5uhLMvHQACE74OUQ",
@@ -39,7 +38,7 @@ export const FirebaseProvider = (props) => {
         alert("Successfully signed up")
       })
       .catch((err) => {
-        if (err.code == "auth/email-already-in-use") {
+        if (err.code === "auth/email-already-in-use") {
           alert("Email already in use");
         }
         console.log(err);
@@ -52,12 +51,13 @@ export const FirebaseProvider = (props) => {
         alert("Successfully signed in");
       })
       .catch((err) => {
-        alert(err);
+        alert("Invalid email or password");
       });
   };
 
   const signInWithGoogle = () => {
-    signInWithPopup(firebaseAuth, provider)
+   
+    signInWithRedirect(firebaseAuth, provider)
       .then((userCredential) => {
         alert("Successfully signed in");
       })
