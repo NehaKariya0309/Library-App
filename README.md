@@ -1,4 +1,4 @@
-![Tech Stacks](https://github-readme-tech-stack.vercel.app/api/cards?title=Tech+Stacks&lineCount=1&width=1000&line1=React%2CReact.js%2C6c9db5%3BFirebase%2CFirebase%2Cc8ea3d%3Bhtml5%2Chtml5%2Ce78331%3Bvercel%2Cvercel%2Cfffef9%3BCSS3%2CCSS3%2Cd43f84%3B)
+![Tech Stacks](https://github-readme-tech-stack.vercel.app/api/cards?title=Tech+Stacks&fontSize=45&lineCount=1&width=1000&line1=React%2CReact.js%2C6c9db5%3BFirebase%2CFirebase%2Cc8ea3d%3Bhtml5%2Chtml5%2Ce78331%3Bvercel%2Cvercel%2Cfffef9%3BCSS3%2CCSS3%2Cd43f84%3B)
 
 The Library App , BookStacker , provides a way to maintain library's records like never before with our state-of-the-art app tailored for modern librarians. It is provided with secure authentication.
 
