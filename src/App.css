@@ -1,7 +1,17 @@
 
-body{
-  background: red;
-}
+
+  body{
+    background: url('./bg-photo.jpg');
+    background-size: contain;
+    overflow-x:hidden;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+   
+    
+  
+  }
+
+
 .header .container {
   justify-content: center;
 }
@@ -46,6 +56,16 @@ table {
 
 .App-link {
   color: #61dafb;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  left:0; 
+  width:100%;
+  background-color: #212529;
+  text-align: center;
+  color: #fff;
 }
 
 @keyframes App-logo-spin {

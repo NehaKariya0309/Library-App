@@ -10,7 +10,6 @@ const BooksList = ({ getBookId, userId }) => {
 
   const getBooks = async () => {
     const data = await BookDataService.getAllBooks(userId);
-    // console.log(data.docs);
     setBooks(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 
@@ -31,24 +30,24 @@ const BooksList = ({ getBookId, userId }) => {
       </div>
 
       {/* <pre>{JSON.stringify(books, undefined, 2)}</pre>} */}
-      <Table striped bordered hover size="sm">
+      <Table striped bordered hover size="sm" >
         <thead>
           <tr>
             <th>#</th>
-            <th>Book Title</th>
-            <th>Book Author</th>
-            <th>Status</th>
-            <th>Action</th>
+            <th style={{fontWeight: "bolder"}}>Book Title</th>
+            <th style={{fontWeight: "bolder"}}>Book Author</th>
+            <th style={{fontWeight: "bolder"}}>Status</th>
+            <th style={{fontWeight: "bolder"}}>Action</th>
           </tr>
         </thead>
         <tbody>
           {books.map((doc, index) => {
             return (
               <tr key={doc.id}>
-                <td>{index + 1}</td>
-                <td>{doc.title}</td>
-                <td>{doc.author}</td>
-                <td>{doc.status}</td>
+                <td style={{fontWeight: "bold"}}>{index + 1}</td>
+                <td style={{fontWeight: "bold"}}>{doc.title}</td>
+                <td style={{fontWeight: "bold"}}>{doc.author}</td>
+                <td style={{fontWeight: "bold"}}>{doc.status}</td>
                 <td>
                   <Button
                     variant="secondary"
